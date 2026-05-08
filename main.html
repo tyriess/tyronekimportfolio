@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kim Tyrone Portfolio - Creative Design, Video Editing, Web Design & Administrative Support">
+    <meta name="keywords" content="Virtual Assistant, Graphic Design, Video Editing, Web Design, Admin Support">
+    <title>Kim Tyrone Portfolio | Creative & Reliable Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body oncontextmenu="return false;">
+
+<body>
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+    </div>
+
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">KIM TYRONE<span class="logo-accent"></span></span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#testimonials" class="nav-link">Feedback</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="typing-text" id="typingText">Creative Virtual Assistant</span>
+                    <span class="cursor">|</span>
+                </h1>
+                <p class="hero-subtitle">For Your Business</p>
+                <p class="hero-description">
+                    Helping your brands grow through creative design, video editing, web design, and efficient administrative support. Your success is my priority.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Hire Me</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-circle">
+                    <div class="profile-image">
+                        <img src="Picture/Kim_Picture.jpg" class="profile-image" alt="Kim Tyrone">
+                    </div>
+                    <div class="glow-ring"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-gradient"></div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Professional Virtual Assistant with Diverse Creative Skills</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a dedicated Virtual Assistant with a passion for helping businesses streamline operations and scale creatively. With expertise across multiple disciplines, I bring both technical precision and creative flair to every project.
+                    </p>
+                    <p class="about-description">
+                        My journey started with a simple goal: make business administration more efficient and creative. Today, I work with entrepreneurs, startups, and established brands to manage their administrative needs while bringing fresh, creative perspectives to their projects.
+                    </p>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4>Graphic Design</h4>
+                            <p>Professional design for brands, marketing materials, and digital assets</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h4>Video Editing</h4>
+                            <p>Polished video content, animations, and visual storytelling</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p>Modern, responsive websites that convert visitors to customers</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4>Admin Tasks</h4>
+                            <p>Organized, reliable administrative support and project management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5">0</div>
+                        <p class="stat-label">Happy Clients</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="2">0</div>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4.9</div>
+                        <p class="stat-label">Avg Rating</p>
+                    </div>
+
+                    <div class="skills-section">
+                        <h3>Key Skills</h3>
+                        <div class="skill-bar">
+                            <div class="skill-item">
+                                <span class="skill-name">Design & Branding</span>
+                                <div class="skill-progress">
+                                    <div class="skill-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Video Editing</span>
+                                <div class="skill-progress">
+                                    <div class="skill-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Web Development</span>
+                                <div class="skill-progress">
+                                    <div class="skill-fill" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Project Management</span>
+                                <div class="skill-progress">
+                                    <div class="skill-fill" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: Graphic Design -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Professional branding, logos, marketing materials, social media graphics, and visual assets that capture your brand's essence</p>
+                    <div class="service-tags">
+                        <span class="tag">Logo Design</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Social Media</span>
+                    </div>
+                </div>
+
+                <!-- Service 2: Video Editing -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Cinematic video editing, motion graphics, animations, YouTube content optimization, and visual storytelling that engages audiences</p>
+                    <div class="service-tags">
+                        <span class="tag">Editing</span>
+                        <span class="tag">Animation</span>
+                        <span class="tag">Motion Graphics</span>
+                    </div>
+                </div>
+
+                <!-- Service 3: Web Design -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Modern, responsive, and conversion-optimized websites that showcase your brand and turn visitors into customers</p>
+                    <div class="service-tags">
+                        <span class="tag">Responsive</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">CMS</span>
+                    </div>
+                </div>
+
+                <!-- Service 4: Admin Support -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Administrative Support</h3>
+                    <p>Efficient management of emails, scheduling, invoicing, research, and day-to-day operational tasks to keep your business running smoothly</p>
+                    <div class="service-tags">
+                        <span class="tag">Email Mgmt</span>
+                        <span class="tag">Scheduling</span>
+                        <span class="tag">CRM</span>
+                    </div>
+                </div>
+
+                <!-- Service 5: Data Entry -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Entry & Management</h3>
+                    <p>Accurate data entry, spreadsheet management, database organization, and information processing with meticulous attention to detail</p>
+                    <div class="service-tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">Databases</span>
+                        <span class="tag">Organization</span>
+                    </div>
+                </div>
+
+                <!-- Service 6: Social Media -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Assistance</h3>
+                    <p>Content planning, scheduling, community management, engagement strategies, and growth optimization across all major platforms</p>
+                    <div class="service-tags">
+                        <span class="tag">Strategy</span>
+                        <span class="tag">Scheduling</span>
+                        <span class="tag">Growth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY HIRE ME SECTION ============ -->
+    <section class="why-hire" id="why-hire">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Hire Me</h2>
+                <p class="section-subtitle">What sets me apart from other virtual assistants</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Fast Communication</h3>
+                    <p>Quick responses, clear updates, and proactive communication to keep your projects on track</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Creative Problem Solving</h3>
+                    <p>Innovative ideas and strategic thinking to overcome challenges and exceed expectations</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3>Attention to Detail</h3>
+                    <p>Meticulous work quality, error-free deliverables, and professional standards on every project</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Organized Workflow</h3>
+                    <p>Efficient project management, deadline adherence, and systematic processes for optimal results</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Reliable Support</h3>
+                    <p>Consistent, dependable service you can count on. I'm committed to your success and growth</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Tech-Savvy Skills</h3>
+                    <p>Proficient with latest tools, software, and platforms. Always learning and adapting to new technologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PORTFOLIO SECTION ============ -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Showcase of recent projects and creative work</p>
+            </div>
+
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="design">Graphic Design</button>
+                <button class="filter-btn" data-filter="video">Video Editing</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="Logo/logo DIDANG PNG2.png" alt="Social Media Graphics">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Logo Design</h3>
+                        <p>"Didang Lutong Bahay provide quality food services"</p>
+                        <button class="view-project-btn" onclick="openImageModal('Logo/logo DIDANG PNG2.png', 'Logo Design')">
+                            <i class="fas fa-search-plus"></i> View Full
+                        </button>
+                    </div>
+                </div>
+
+                <div id="imageModal" class="image-modal">
+                    <span class="close-image-modal" onclick="closeImageModal()">&times;</span>
+                    <div class="image-modal-content">
+                        <img id="fullSizeImage" src="" alt="">
+                        <div id="imageCaption"></div>
+                    </div>
+                </div>
+
+                 <!-- Logo Design 2 -->
+                                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="Logo/XACE.jpg" alt="Social Media Graphics">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Logo Design</h3>
+                        <p>XACE is reliable phone repair and support.
+                           XACE is a dedicated phone repair service.</p>
+                        <button class="view-project-btn" onclick="openImageModal('Logo/XACE.jpg', 'Logo Design')">
+                            <i class="fas fa-search-plus"></i> View Full
+                        </button>
+                    </div>
+                </div>
+
+                <div id="imageModal" class="image-modal">
+                    <span class="close-image-modal" onclick="closeImageModal()">&times;</span>
+                    <div class="image-modal-content">
+                        <img id="fullSizeImage" src="" alt="">
+                        <div id="imageCaption"></div>
+                    </div>
+                </div>
+            
+                     <!-- Poster Design -->
+                                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="Poster/Comasel Poster.jpg" alt="Social Media Graphics">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Social Media Graphics</h3>
+                        <p>"Comasel campaign poster and social assets"</p>
+                        <button class="view-project-btn" onclick="openImageModal('Poster/Comasel Poster.jpg', 'Social Media Graphics')">
+                            <i class="fas fa-search-plus"></i> View Full
+                        </button>
+                    </div>
+                </div>
+
+                <div id="imageModal" class="image-modal">
+                    <span class="close-image-modal" onclick="closeImageModal()">&times;</span>
+                    <div class="image-modal-content">
+                        <img id="fullSizeImage" src="" alt="">
+                        <div id="imageCaption"></div>
+                    </div>
+                </div>
+                <!-- Web Project 2 -->
+             <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="Picture/E Commerce.png" alt="E Commerce Website">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>E Commerce Website  </h3>
+                        <p>This is a full-featured e-commerce website with a modern design and seamless user experience.
+                           This my first web design project that I created using HTML, CSS, and JavaScript. It features a clean and intuitive interface, making it easy for customers to browse products, add items to their cart, and complete purchases with confidence. The website is fully responsive, ensuring a smooth shopping experience across all devices. With secure payment integration and efficient product management, this e-commerce site is designed to drive sales and provide an exceptional online shopping experience.
+                        </p>
+                        <button class="view-project-btn" onclick="openImageModal('Picture/E Commerce.png', 'E Commerce Website')">
+                            <i class="fas fa-search-plus"></i> View Full
+                        </button>
+                    </div>
+                </div>
+
+                <div id="imageModal" class="image-modal">
+                    <span class="close-image-modal" onclick="closeImageModal()">&times;</span>
+                    <div class="image-modal-content">
+                        <img id="fullSizeImage" src="" alt="">
+                        <div id="imageCaption"></div>
+                    </div>
+                </div>
+                
+                    <!-- Web Project 2 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="Picture/Screenshot (9).png" alt="My First Portfolio">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>My First Portfolio </h3>
+                        <p>This is my first Simple Portfolio Website that I created using HTML, CSS, and JavaScript. It features a clean and intuitive interface, making it easy for visitors to navigate through different sections such as Home, About, Project, Skills, Certification, and Contact. The website is fully responsive, ensuring a seamless browsing experience across all devices. With engaging visuals and well-organized content, this portfolio site effectively showcases my skills and projects while providing an exceptional user experience.
+                        </p>
+                        <button class="view-project-btn" onclick="openImageModal('Picture/Screenshot (9).png', 'My First Portfolio')">
+                            <i class="fas fa-search-plus"></i> View Full
+                        </button>
+                    </div>
+                </div>
+
+                <div id="imageModal" class="image-modal">
+                    <span class="close-image-modal" onclick="closeImageModal()">&times;</span>
+                    <div class="image-modal-content">
+                        <img id="fullSizeImage" src="" alt="">
+                        <div id="imageCaption"></div>
+                    </div>
+                </div>
+
+                        <!-- Video Project Card -->
+                <div class="portfolio-item video-card" data-category="video">
+                    <div class="video-preview-container">
+                        <video class="portfolio-video-preview" muted loop preload="metadata">
+                            <source src="Video/THE ORIGIN OF SINULOG.mp4" type="video/mp4">
+                            <source src="Video/THE_ORIGIN_OF_SINULOG.mov" type="video/quicktime">
+                        </video>
+                        <!-- The "Play/Full Screen" Button -->
+                        <div class="play-trigger" onclick="openVideoModal('Video/THE ORIGIN OF SINULOG.mp4')">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-details">
+                        <h3>Educational Video for Sinulog</h3>
+                        <p>This video explores the origins and significance of the Sinulog festival using AI-generated visuals and professional editing.</p>
+                    </div>
+
+                    <!-- Video Project 2 -->
+                </div>
+                    <div class="portfolio-item video-card" data-category="video">
+                            <div class="video-preview-container">
+                                 <video class="portfolio-video-preview" muted loop preload="metadata">
+                                        <source src="Video/SINULOG FESTIVAL NARRATION.mp4" type="video/mp4">
+                                        <source src="Video/SIINULOG FESTIVAL NARRATION .mov" type="video/quicktime">
+                                 </video>
+                             <!-- The "Play/Full Screen" Button -->
+                            <div class="play-trigger" onclick="openVideoModal('Video/SINULOG FESTIVAL NARRATION.mp4')">
+                                    <i class="fas fa-expand"></i>
+                                    </div>
+                                </div>   
+                                 <div class="portfolio-details">
+                                    <h3>SINULOG FESTIVAL NARRATION</h3>
+                                    <p>A compelling narrative exploring the rich history and cultural significance of the Sinulog Festival.</p>
+                                     </div>
+                        </div>
+                        
+                
+            </div>
+        </div>
+    </section>
+
+      <!-- Full Screen Video Modal -->
+                <div id="videoModal" class="video-modal">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-content">
+                        <video id="modalVideo" controls>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+    <!-- ============ TESTIMONIALS SECTION ============ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What clients say about working with me</p>
+            </div>
+
+            <div class="testimonial-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Exceptional work! The virtual assistant took complete ownership of my project. Delivered before deadline with incredible attention to detail. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='25' fill='%230080ff'/%3E%3Ctext x='25' y='28' font-size='24' fill='white' text-anchor='middle'%3EJM%3C/text%3E%3C/svg%3E" alt="Client">
+                            <div>
+                                <h4>James Mitchell</h4>
+                                <p>Startup Founder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Professionalism at its finest. Creative solutions to complex problems. This VA is not just efficient but genuinely invested in project success. Worth every penny!"</p>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23ff00ff'/%3E%3Ctext x='25' y='28' font-size='24' fill='white' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E" alt="Client">
+                            <div>
+                                <h4>Sarah Rodriguez</h4>
+                                <p>Marketing Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Reliable, creative, and always goes above and beyond. Transformed our workflow and freed up my time for business growth. Best hire I've made this year!"</p>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='25' fill='%2300ff88'/%3E%3Ctext x='25' y='28' font-size='24' fill='white' text-anchor='middle'%3EAK%3C/text%3E%3C/svg%3E" alt="Client">
+                            <div>
+                                <h4>Alex Kim</h4>
+                                <p>CEO, E-Commerce Brand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Incredible communication and dedication. Every project delivered flawlessly. A true professional who understands business needs and delivers results."</p>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23ffd700'/%3E%3Ctext x='25' y='28' font-size='24' fill='white' text-anchor='middle'%3EEM%3C/text%3E%3C/svg%3E" alt="Client">
+                            <div>
+                                <h4>Emily Martinez</h4>
+                                <p>Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="slider-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Get in touch and let's discuss your next project</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>kimtyone077@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+63 952 441 6741</p>
+                        </div>
+                    </div> 
+                    <div class="info-item">
+                        <div class="info-icon">
+                           <i class="fas fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+63 954 245 4381</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Catanduanes, Philippines</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Connect With Me</h4>
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/kimtyrone" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tyrrsiiee/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            </a>
+                            <a href="https://www.facebook.com/tyrssiiee" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Discuss with me..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Virtual Assistant</h4>
+                    <p>Premium creative services for your business</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Graphic Design</a></li>
+                        <li><a href="#services">Video Editing</a></li>
+                        <li><a href="#services">Web Design</a></li>
+                        <li><a href="#services">Admin Support</a></li>
+                    </ul>
+                </div>
+             <div class="footer-section">
+    <h4>Social</h4>
+    <div class="footer-socials">
+        <!-- rel="noopener noreferrer" is essential for security on external links -->
+        <!-- aria-label ensures screen readers can identify the icon-only link -->
+        <a href="https://www.instagram.com/tyrrsiiee/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/tyrssiiee" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        </div>
+        </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kim Tyrone Portfolio. All rights reserved. | Designed with passion</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============ AI CHATBOT WIDGET ============ -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i> Kim's AI Assistant
+            </div>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <p>Hi there! 👋 I'm Kim's AI Assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-options" id="chatbotOptions">
+            <button class="chat-option" data-option="services">📋 View Services</button>
+            <button class="chat-option" data-option="contact">📞 Get Contact Info</button>
+            <button class="chat-option" data-option="portfolio">🎨 See Portfolio</button>
+            <button class="chat-option" data-option="inquiry">💬 Send Inquiry</button>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." />
+            <button id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // ============ AI CHATBOT FUNCTIONALITY ============
+        const chatbotToggle = document.getElementById('chatbotToggle');
+        const chatbotContainer = document.getElementById('chatbotContainer');
+        const chatbotClose = document.getElementById('chatbotClose');
+        const chatInput = document.getElementById('chatInput');
+        const chatSend = document.getElementById('chatSend');
+        const chatbotMessages = document.getElementById('chatbotMessages');
+        const chatbotOptions = document.getElementById('chatbotOptions');
+
+        // Toggle chatbot visibility
+        chatbotToggle.addEventListener('click', () => {
+            chatbotContainer.classList.toggle('active');
+            chatbotToggle.style.opacity = chatbotContainer.classList.contains('active') ? '0' : '1';
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotContainer.classList.remove('active');
+            chatbotToggle.style.opacity = '1';
+        });
+
+        // Quick option responses
+        const responses = {
+            services: "I offer: Graphic Design, Video Editing, Web Design, Administrative Support, Data Entry, and Social Media Assistance. Which service interests you?",
+            contact: "📧 Email: kimtyone077@gmail.com\n📱 Phone: +63 952 441 6741\n💬 WhatsApp: +63 954 245 4381\n📍 Location: Catanduanes, Philippines",
+            portfolio: "Check out my portfolio section to see my recent projects in Graphic Design, Video Editing, and Web Design. Click the Portfolio link in the menu!",
+            inquiry: "Great! I'd love to hear about your project. Please provide your details and I'll get back to you ASAP!"
+        };
+
+        // Handle option clicks
+        document.querySelectorAll('.chat-option').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const option = e.target.dataset.option;
+                addMessage(btn.textContent.trim(), 'user');
+                setTimeout(() => {
+                    addMessage(responses[option], 'bot');
+                }, 300);
+            });
+        });
+
+        // Send message function
+        function addMessage(text, sender) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${sender}-message`;
+            msgDiv.innerHTML = `<p>${text}</p>`;
+            chatbotMessages.appendChild(msgDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        // Handle text input
+        chatSend.addEventListener('click', () => {
+            const text = chatInput.value.trim();
+            if (text) {
+                addMessage(text, 'user');
+                chatInput.value = '';
+                
+                // Auto-response
+                setTimeout(() => {
+                    addMessage("Thanks for your message! 😊 For faster response, please contact me directly at kimtyone077@gmail.com or WhatsApp +63 954 245 4381", 'bot');
+                }, 500);
+            }
+        });
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                chatSend.click();
+            }
+        });
+    </script>
+</body>
+</html>
