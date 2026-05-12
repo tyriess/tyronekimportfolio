@@ -1,0 +1,876 @@
+<!-- ============ INTRO VIDEO SECTION ============ -->
+<section class="intro-video-section" id="intro-video">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Introduction Video</h2>
+            <p class="section-subtitle">Get to know me and my work through this short video introduction.</p>
+        </div>
+
+        <!-- Video Preview Container -->
+        <div class="video-wrapper">
+            <div class="video-container" id="videoContainer">
+                <!-- Thumbnail Background -->
+                <div class="video-thumbnail">
+                    <img src="https://img.youtube.com/vi/9n8sXo7l5j0/maxresdefault.jpg" alt="Video Thumbnail" loading="lazy">
+                </div>
+
+                <!-- Overlay Gradient -->
+                <div class="video-overlay"></div>
+
+                <!-- Play Button -->
+                <button class="play-button" id="playButton" aria-label="Play video">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21"/>
+                    </svg>
+                    <span class="play-pulse"></span>
+                </button>
+
+                <!-- Video Info Badge -->
+                <div class="video-info-badge">
+                    <span class="video-duration">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        5:32
+                    </span>
+                </div>
+
+                <!-- Hover Indicator -->
+                <div class="video-hover-indicator">
+                    <p>Click to watch</p>
+                </div>
+            </div>
+
+            <!-- Video Stats -->
+            <div class="video-stats">
+                <div class="stat">
+                    <span class="stat-icon">👁️</span>
+                    <div>
+                        <p class="stat-label">Views</p>
+                        <p class="stat-value">12.5K+</p>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">⭐</span>
+                    <div>
+                        <p class="stat-label">Rating</p>
+                        <p class="stat-value">4.8/5</p>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">💬</span>
+                    <div>
+                        <p class="stat-label">Comments</p>
+                        <p class="stat-value">342</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Section -->
+        <div class="video-actions">
+            <button class="share-button" id="shareButton">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Share
+            </button>
+            <div class="share-menu" id="shareMenu">
+                <a href="#" class="share-link" data-platform="facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                    Facebook
+                </a>
+                <a href="#" class="share-link" data-platform="twitter">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"></path>
+                    </svg>
+                    Twitter
+                </a>
+                <a href="#" class="share-link" data-platform="linkedin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </a>
+                <button class="share-link copy-link" id="copyLinkBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                    Copy Link
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeButton" aria-label="Close video">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-video">
+                <iframe 
+                    id="videoFrame"
+                    src="https://www.youtube.com/embed/9n8sXo7l5j0?autoplay=1" 
+                    title="Introduction Video" 
+                    frameborder="0" 
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* ============ INTRO VIDEO SECTION STYLES ============ */
+
+.intro-video-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f1824 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated background elements */
+.intro-video-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.intro-video-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -30%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(131, 56, 236, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 25s ease-in-out infinite reverse;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(30px, -30px);
+    }
+    50% {
+        transform: translate(0, -50px);
+    }
+    75% {
+        transform: translate(-30px, -30px);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: slideInDown 0.8s ease-out;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #00d4ff 0%, #8338ec 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    color: #a0aec0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Video Wrapper and Container */
+.video-wrapper {
+    animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    group: video-container;
+}
+
+.video-thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 212, 255, 0.1) 100%);
+    z-index: 2;
+    transition: background 0.4s ease;
+}
+
+.video-container:hover .video-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 212, 255, 0.2) 100%);
+}
+
+/* Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #00d4ff 0%, #8338ec 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+}
+
+.play-button svg {
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.play-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 212, 255, 0.6);
+    animation: pulse-ring 1.5s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.video-container:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 30px 80px rgba(0, 212, 255, 0.5);
+}
+
+/* Video Info Badge */
+.video-info-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-duration {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.video-duration svg {
+    opacity: 0.7;
+}
+
+/* Hover Indicator */
+.video-hover-indicator {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.video-container:hover .video-hover-indicator {
+    opacity: 1;
+}
+
+.video-hover-indicator p {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Video Stats */
+.video-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 212, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+}
+
+.stat-label {
+    color: #a0aec0;
+    font-size: 0.85rem;
+    margin: 0 0 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Video Actions */
+.video-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    animation: slideInUp 0.8s ease-out 0.6s both;
+    position: relative;
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #00d4ff 0%, #8338ec 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+}
+
+.share-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+}
+
+.share-button:active {
+    transform: translateY(-1px);
+}
+
+.share-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    margin-top: 10px;
+    background: rgba(20, 30, 50, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 180px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 10;
+}
+
+.share-menu.active {
+    transform: translateX(-50%) scaleY(1);
+}
+
+.share-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #a0aec0;
+    text-decoration: none;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.share-link:hover {
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+}
+
+.share-link svg {
+    min-width: 18px;
+}
+
+/* Video Modal */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1001;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 1002;
+}
+
+.modal-close:hover {
+    color: #00d4ff;
+    transform: rotate(90deg);
+}
+
+.modal-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+.modal-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-video-section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .video-container {
+        aspect-ratio: 9 / 16;
+        border-radius: 16px;
+    }
+
+    .play-button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .play-button svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .video-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        aspect-ratio: 9 / 16;
+    }
+
+    .modal-close {
+        top: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .share-menu {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        transform: translateX(0) scaleY(0);
+        transform-origin: bottom;
+    }
+
+    .share-menu.active {
+        transform: translateX(0) scaleY(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-button svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .video-stats {
+        gap: 12px;
+    }
+
+    .stat {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .stat-icon {
+        font-size: 1.5rem;
+        min-width: 40px;
+    }
+
+    .stat-value {
+        font-size: 1.1rem;
+    }
+}
+</style>
+
+<script>
+// ============ INTRO VIDEO SECTION JAVASCRIPT ============
+
+document.addEventListener('DOMContentLoaded', function() {
+    const videoContainer = document.getElementById('videoContainer');
+    const playButton = document.getElementById('playButton');
+    const videoModal = document.getElementById('videoModal');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const closeButton = document.getElementById('closeButton');
+    const shareButton = document.getElementById('shareButton');
+    const shareMenu = document.getElementById('shareMenu');
+    const copyLinkBtn = document.getElementById('copyLinkBtn');
+    const shareLinks = document.querySelectorAll('.share-link');
+
+    // Open video modal
+    function openVideoModal() {
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close video modal
+    function closeVideoModal() {
+        videoModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Play button click
+    playButton.addEventListener('click', openVideoModal);
+    videoContainer.addEventListener('click', openVideoModal);
+
+    // Close modal
+    closeButton.addEventListener('click', closeVideoModal);
+    modalBackdrop.addEventListener('click', closeVideoModal);
+
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+            closeVideoModal();
+        }
+    });
+
+    // Share button toggle
+    shareButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        shareMenu.classList.toggle('active');
+    });
+
+    // Close share menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!shareButton.contains(e.target) && !shareMenu.contains(e.target)) {
+            shareMenu.classList.remove('active');
+        }
+    });
+
+    // Share links handler
+    shareLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const platform = this.getAttribute('data-platform');
+            handleShare(platform);
+            shareMenu.classList.remove('active');
+        });
+    });
+
+    // Copy link functionality
+    copyLinkBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            showNotification('Link copied to clipboard!');
+            shareMenu.classList.remove('active');
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+        });
+    });
+
+    // Share handler
+    function handleShare(platform) {
+        const videoUrl = 'https://www.youtube.com/watch?v=9n8sXo7l5j0';
+        const currentUrl = window.location.href;
+        const title = 'Check out my introduction video!';
+        let shareUrl = '';
+
+        switch(platform) {
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+                break;
+            case 'twitter':
+                shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(title)}`;
+                break;
+            case 'linkedin':
+                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+                break;
+        }
+
+        if (shareUrl) {
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+    }
+
+    // Notification system
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #00d4ff 0%, #8338ec 100%);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            z-index: 2000;
+            animation: slideInUp 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        `;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideDown 0.3s ease forwards';
+            setTimeout(() => notification.remove(), 300);
+        }, 2000);
+    }
+
+    // Add slideDown animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideDown {
+            to {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, observerOptions);
+
+    // Observe animated elements
+    document.querySelectorAll('[style*="animation"]').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Performance optimization - lazy load thumbnail
+    const thumbnail = document.querySelector('.video-thumbnail img');
+    if ('loading' in HTMLImageElement.prototype) {
+        thumbnail.loading = 'lazy';
+    }
+
+    console.log('✅ Intro Video Section initialized');
+});
+</script>

@@ -12,8 +12,6 @@ const particles = document.getElementById('particles');
 const typingText = document.getElementById('typingText');
 const backToTop = document.getElementById('backToTop');
 const contactForm = document.getElementById('contactForm');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
 
 // ============ INITIALIZATION ============
 document.addEventListener('DOMContentLoaded', () => {
@@ -128,13 +126,6 @@ function setupEventListeners() {
     // Contact form submission
     contactForm.addEventListener('submit', handleFormSubmit);
     
-    // Testimonial slider
-    prevBtn.addEventListener('click', () => changeTestimonial(-1));
-    nextBtn.addEventListener('click', () => changeTestimonial(1));
-    
-    // Auto-rotate testimonials
-    setInterval(() => changeTestimonial(1), 8000);
-    
     // Portfolio filtering
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => filterPortfolio(btn.dataset.filter));
@@ -202,30 +193,6 @@ function filterPortfolio(category) {
         }
     });
 }
-
-// ============ TESTIMONIAL SLIDER ============
-let currentTestimonial = 0;
-
-function showTestimonial(index) {
-    const cards = document.querySelectorAll('.testimonial-card');
-    
-    if (index >= cards.length) {
-        currentTestimonial = 0;
-    } else if (index < 0) {
-        currentTestimonial = cards.length - 1;
-    }
-    
-    cards.forEach(card => card.classList.remove('active'));
-    cards[currentTestimonial].classList.add('active');
-}
-
-function changeTestimonial(direction) {
-    currentTestimonial += direction;
-    showTestimonial(currentTestimonial);
-}
-
-// Initialize testimonial slider
-showTestimonial(0);
 
 // ============ STATS COUNTER ANIMATION ============
 function animateStats() {
@@ -386,11 +353,7 @@ function debounce(func, delay) {
 
 // ============ KEYBOARD NAVIGATION ============
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') {
-        changeTestimonial(1);
-    } else if (e.key === 'ArrowLeft') {
-        changeTestimonial(-1);
-    } else if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
     }
@@ -572,3 +535,167 @@ window.onclick = function(event) {
     if (event.target == imgModal) closeImageModal();
     if (event.target == vidModal) closeModal(); // Reusing your existing video close
 }
+
+// ============ INTRO VIDEO SECTION JAVASCRIPT ============
+
+document.addEventListener('DOMContentLoaded', function() {
+    const videoContainer = document.getElementById('videoContainer');
+    const playButton = document.getElementById('playButton');
+    const videoModal = document.getElementById('videoModal');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const closeButton = document.getElementById('closeButton');
+    const shareButton = document.getElementById('shareButton');
+    const shareMenu = document.getElementById('shareMenu');
+    const copyLinkBtn = document.getElementById('copyLinkBtn');
+    const shareLinks = document.querySelectorAll('.share-link');
+
+    // Open video modal
+    function openVideoModal() {
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close video modal
+    function closeVideoModal() {
+        videoModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Play button click
+    playButton.addEventListener('click', openVideoModal);
+    videoContainer.addEventListener('click', openVideoModal);
+
+    // Close modal
+    closeButton.addEventListener('click', closeVideoModal);
+    modalBackdrop.addEventListener('click', closeVideoModal);
+
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+            closeVideoModal();
+        }
+    });
+
+    // Share button toggle
+    shareButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        shareMenu.classList.toggle('active');
+    });
+
+    // Close share menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!shareButton.contains(e.target) && !shareMenu.contains(e.target)) {
+            shareMenu.classList.remove('active');
+        }
+    });
+
+    // Share links handler
+    shareLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const platform = this.getAttribute('data-platform');
+            handleShare(platform);
+            shareMenu.classList.remove('active');
+        });
+    });
+
+    // Copy link functionality
+    copyLinkBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            showNotification('Link copied to clipboard!');
+            shareMenu.classList.remove('active');
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+        });
+    });
+
+    // Share handler
+    function handleShare(platform) {
+        const videoUrl = 'https://www.youtube.com/watch?v=9n8sXo7l5j0';
+        const currentUrl = window.location.href;
+        const title = 'Check out my introduction video!';
+        let shareUrl = '';
+
+        switch(platform) {
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+                break;
+            case 'twitter':
+                shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(title)}`;
+                break;
+            case 'linkedin':
+                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+                break;
+        }
+
+        if (shareUrl) {
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+    }
+
+    // Notification system
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #00d4ff 0%, #8338ec 100%);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            z-index: 2000;
+            animation: slideInUp 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        `;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideDown 0.3s ease forwards';
+            setTimeout(() => notification.remove(), 300);
+        }, 2000);
+    }
+
+    // Add slideDown animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideDown {
+            to {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, observerOptions);
+
+    // Observe animated elements
+    document.querySelectorAll('[style*="animation"]').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Performance optimization - lazy load thumbnail
+    const thumbnail = document.querySelector('.video-thumbnail img');
+    if ('loading' in HTMLImageElement.prototype) {
+        thumbnail.loading = 'lazy';
+    }
+
+    console.log('✅ Intro Video Section initialized');
+});
+
